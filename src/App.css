@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+.App {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F4F6FA;
+  height: 100%;
+}
+#root{
+  height: 100%;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: white;
+  z-index: 1000;
+}
+
+.content {
+  display: flex;
+  height: 100vh;
+}
+
+.side-panel {
+  width: 310px;
+  height: 100%;
+  background-color: #ff5722;
+}
+label{
+  background-color: #fff;
+  padding: 0 6px !important;
+}
+.main-content {
+  flex: 1;
+  background-color: #F4F6FA;
+}
+
+.main-content.with-sidepanel {
+  margin-left: 310px;
+}
+
+.main-content.full-width {
+  margin-left: 0;
+}
+.background-graphics{
+  margin-left: 310px;
+}
+.main-wrapper{
+  padding-top: 82px;
+}
+.content-wrapper{
+  padding: 25px;
+}
+.panel-footer{
+  padding: 24px 40px 40px 40px;
+}
+.background-graphics::before {
+  content: "";
+  position: fixed;
+  background-image: url(/src/assets/up-graphic-bg.png);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: top;
+  background-size: 440px;
+}
+
+.background-graphics::after {
+  content: "";
+  position: fixed;
+  background-image: url(/src/assets/down-graphic-bg.png);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: bottom;
+  background-size: 680px;
+}
+
+.background-graphics > div{
+  z-index: 1;
+  position: relative;
+}
+
+.MuiContainer-root {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+/* .MuiGrid2-container{
+  max-width: 1335px;
+} */
+.MuiButton-root {
+  text-transform: none !important;
+  font-size: 16px !important;
+  height: 58px;
+  border-radius: 12px !important;
+  box-shadow: none;
+}
+.MuiOutlinedInput-root,
+.MuiButtonBase-root{
+  height: 48px !important;
+}
+.MuiCardContent-root{
+  padding: 0px !important;
+  border-radius: 16px;
+  background-color: #fff;
+}
+.MuiOutlinedInput-root {
+  border-color: #ff6b4a;
+  border-radius: 8px !important;
+  background-color: #fff;
+}
+.MuiFormHelperText-root{
+color: red !important;
+margin: 0 !important;
+}
+.MuiTimelineDot-root {
+  margin: 0 !important;
+}
+.MuiTimelineDot-root:first-child{
+  background-color: #ff6b4a;
+}
+.MuiTimelineContent-root{
+  padding: 0 16px !important;
+}
+.MuiTimelineItem-root::before {
+  flex: 0 !important;
+  padding: 0 !important;
+}
+
+.upload-btn {
+  background-color: #FFF7F5 !important;
+  color: #ff6b4a !important;
+  box-shadow: none !important;
+  border: 2px dashed !important;
+  text-transform: none !important;
+}
+.Attach-flie-btn{
+  background-color: #fff !important;
+  border: 2px dashed #D1D9E2 !important;
+  color: #313638 !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+}
+.panel-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.panel-content{
+  padding: 40px 40px 0;
+}
+.panel-body{
+  border: 1px solid #D1D9E2;
+  border-left: none;
+  border-right: none;
+  background-color: #FEF6F4;
+  padding: 32px 40px;
+}
+.sub-heading {
+  color: #717171;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+/* --------create course css------------ */
+
+.course-textfield button {
+  text-transform: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.error{
+  color: red !important;
+  font-size: 0.7rem !important;
+}
+.p-40{
+  padding: 40px !important;
+}
+.left-panel{
+  margin: auto;
+}
+.create-btn{
+  height: 48px;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+}
+.search-field{
+  border-left: 1px solid #c4c4c4 !important;
+  border-radius: 0 !important;
+  height: 100%;
+}
+input:-webkit-autofill {
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0px 1000px #ffffff inset;
+  font-family: "Montserrat";
+  padding: 12.5px 14px;
+}
