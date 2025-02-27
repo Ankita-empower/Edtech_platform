@@ -1,0 +1,102 @@
+/* Styling for the side panel drawer */
+.side-panel {
+  position: relative; /* Allow the drawer to be controlled by React */
+  height: 100%; /* Full height */
+  background-color: #F06543; /* Theme color */
+  color: white; /* Text color */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  z-index: 1200; /* Make sure the side panel drawer is above the content */
+}
+
+/* The drawer that slides in/out */
+.MuiDrawer-root {
+  width: 240px; /* Width of the side panel */
+  flex-shrink: 0;
+}
+
+.MuiDrawer-paper {
+  width: 310px; /* Same width as the root */
+  background-color: #F06543; /* Background color */
+  color: white; /* Text color */
+  border-right: none; /* No border */
+}
+
+/* Menu styling inside the side panel */
+.side-panel .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0px 25px;
+}
+
+/* Styling for each menu item */
+.side-panel .menu-item {
+  cursor: pointer;
+}
+
+.side-panel .menu-item a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.side-panel .menu-item button {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.side-panel .menu-item:hover,
+.side-panel .menu-item:active,
+.side-panel .menu-item:hover button,
+.side-panel .menu-item:hover button {
+  font-weight: 700;
+}
+
+/* Adjust the appearance of the menu links */
+.side-panel .menu-item a img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Styling for the toggle button */
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: black; /* Black color for the toggle button */
+  cursor: pointer;
+}
+
+/* Main content */
+.main-content {
+  transition: margin-left 0.3s ease;
+}
+
+/* Adjust content layout when the drawer is open */
+/* .main-content.full-width {
+  margin-left: 240px;
+} */
+
+.main-content {
+  margin-left: 0;
+}
+
+/* Optional: If you have a mobile version or responsive design */
+@media (max-width: 768px) {
+  .MuiDrawer-paper {
+    width: 200px; /* Adjust for smaller screens */
+  }
+
+  .main-content {
+    margin-left: 0; /* Adjust when the drawer is open */
+  }
+
+  /* .main-content.full-width {
+    margin-left: 200px;
+  } */
+}
